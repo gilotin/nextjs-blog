@@ -18,6 +18,7 @@ export default function Home({ allPostsData }) {
     return (
         <Layout home>
             <Head>
+                <p className={utilStyles.test}>This is test page, thank you for visiting it!</p>
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.headingMd}>

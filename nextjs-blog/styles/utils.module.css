@@ -37,6 +37,11 @@
     padding-top: 1px;
 }
 
+.test {
+    text-align: center;
+    background-color: red;
+}
+
 .list {
     list-style: none;
     padding: 0;
