@@ -16,6 +16,11 @@
     position: absolute;
     top: 0px;
 }
+.navigation ul {
+    display: inline;
+    margin: 1rem;
+    padding: 1rem;
+}
 
 .backToHome {
     margin: 3rem 0 0;

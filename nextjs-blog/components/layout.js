@@ -27,6 +27,14 @@ export default function Layout({ children, home }) {
             </Head>
             <header className={styles.header}>
                 <p>This is test webpage, thanks for visiting it!</p>
+
+                <nav className={styles.navigation}>
+                    <ul>
+                        <Link href="/authors/me">About</Link>
+                    </ul>
+                    <ul>Test1</ul>
+                    <ul>Test 2</ul>
+                </nav>
                 {home ? (
                     <>
                         <Image
