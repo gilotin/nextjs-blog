@@ -10,6 +10,13 @@
     align-items: center;
 }
 
+.header p {
+    text-align: center;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+}
+
 .backToHome {
     margin: 3rem 0 0;
 }
