@@ -1,3 +1,3 @@
-const dataArr = [];
+const initialDataArr = ["Do dishes", "watch movie"];
 
-export default dataArr;
+export default initialDataArr;
