@@ -1,18 +1,25 @@
 import { useState } from "react";
 import Layout from "./layout";
-import dataArr from "../dataTodoApp/todoData";
+import initialDataArr from "../dataTodoApp/todoData";
 
 export default function AddTask() {
     const [task, setTask] = useState("");
+    const [dataArr, setDataArr] = useState(initialDataArr);
 
-    const onSubmitHandler = (e) => {
+    function onSubmitHandler(e) {
         e.preventDefault();
-        if (task === "") {
+        if (task.trim() === "") {
             return;
         }
         dataArr.push(task.trim());
         setTask("");
-    };
+    }
+
+    function onDelete(id) {
+        const updatedDataArr = [...dataArr];
+        updatedDataArr.splice(id, 1);
+        setDataArr(updatedDataArr);
+    }
 
     return (
         <Layout>
@@ -27,8 +34,10 @@ export default function AddTask() {
             </form>
 
             <ul>
-                {dataArr.map((x, i) => (
-                    <li key={i}>{x}</li>
+                {dataArr.map((x, id) => (
+                    <li key={id}>
+                        {x} <button onClick={() => onDelete(id)}>delete</button>
+                    </li>
                 ))}
             </ul>
         </Layout>
