@@ -32,7 +32,9 @@ export default function Layout({ children, home }) {
                     <ul>
                         <Link href="/authors/me">About</Link>
                     </ul>
-                    <ul>Test1</ul>
+                    <ul>
+                        <Link href="/todoApp/todo-list">Todo List</Link>
+                    </ul>
                     <ul>Test 2</ul>
                 </nav>
                 {home ? (
