@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Work+Sans&display=swap");
+
 html,
 body {
-    background-color: lightblue;
+    background: url(../public/white-painted-wood-textured-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    line-height: 1.6;
-    font-size: 18px;
+    font-family: "Amatic SC", cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    font-weight: 600;
+    width: 100%;
 }
 
 * {
