@@ -1,17 +1,16 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Nikolay Toshev";
-export const siteTitle = "Nikolay Toshev blog-test";
+export const siteTitle = "Nikolay Toshev test app";
 
 export default function Layout({ children, home }) {
     return (
         <div className={styles.container}>
             <Head>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
                 <meta
                     name="description"
                     content="Learn how to build a personal website using Next.js"
@@ -35,39 +34,11 @@ export default function Layout({ children, home }) {
                     <ul>
                         <Link href="/todoApp/todo-list">Todo List</Link>
                     </ul>
-                    <ul>Test 2</ul>
+                    <ul>
+                        <Link href="/notebook">NoteBook</Link>
+                    </ul>
                 </nav>
-                {home ? (
-                    <>
-                        <Image
-                            priority
-                            src="/profile.jpg"
-                            className={utilStyles.borderCircle}
-                            height={144}
-                            width={144}
-                            alt=""
-                        />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
-                    </>
-                ) : (
-                    <>
-                        <Link href="/">
-                            <Image
-                                priority
-                                src="/profile.jpg"
-                                className={utilStyles.borderCircle}
-                                height={108}
-                                width={108}
-                                alt=""
-                            />
-                        </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href="/" className={utilStyles.colorInherit}>
-                                {name}
-                            </Link>
-                        </h2>
-                    </>
-                )}
+                {home}
             </header>
             <main>{children}</main>
             {!home && (
@@ -75,6 +46,8 @@ export default function Layout({ children, home }) {
                     <Link href="/">← Back to home</Link>
                 </div>
             )}
+
+            <footer className={utilStyles.footer}>This site is for learning purposes only!</footer>
         </div>
     );
 }

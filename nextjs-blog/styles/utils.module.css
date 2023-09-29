@@ -37,11 +37,6 @@
     padding-top: 1px;
 }
 
-.test {
-    text-align: center;
-    background-color: red;
-}
-
 .list {
     list-style: none;
     padding: 0;
@@ -54,4 +49,13 @@
 
 .lightText {
     color: #666;
+}
+
+/* Footer */
+
+.footer {
+    position: relative;
+    width: 100%;
+    bottom: 1px;
+    font-size: 20px;
 }
